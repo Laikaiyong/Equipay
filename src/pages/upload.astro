@@ -1,0 +1,31 @@
+---
+import LayoutSidebar from '../app/LayoutSidebar.astro';
+import {
+    TextractClient,
+    AnalyzeExpenseCommand,
+} from '@aws-sdk/client-textract';
+
+const analyze = async (blob) => {
+ try {
+    const client = new TextractClient({});
+    const input = { // AnalyzeDocumentRequest
+        Document: { // Document
+            Bytes: blob,
+            S3Object: { // S3Object
+            Bucket: "STRING_VALUE",
+            Name: "STRING_VALUE",
+            Version: "STRING_VALUE",
+            },
+        },
+    };
+    const command = new AnalyzeExpenseCommand(input);
+    const response = await client.send(command);
+ } catch (error) {
+  console.error(error);
+ }
+};
+---
+
+<LayoutSidebar>
+	Upload Shit here
+</LayoutSidebar>
