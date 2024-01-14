@@ -120,13 +120,13 @@ function analyze(blob) {
     (document.getElementById('pay-period') as HTMLInputElement).value = ret.data.text.split("Pay Period : ")[1].split("D")[0];
     (document.getElementById('designation') as HTMLInputElement).value = ret.data.text.split("Designation : ")[1].split("\n")[0];
     (document.getElementById('department') as HTMLInputElement).value = ret.data.text.split("Department : ")[1].split("\n")[0];
-    document.getElementById('loan').value = ret.data.text.split("Loan")[1].split("\n")[0];
+    (document.getElementById('loan') as HTMLInputElement).value = ret.data.text.split("Loan")[1].split("\n")[0];
 
 
-    document.getElementById('basic').value = ret.data.text.split("Basic")[1].split("\n")[0];
-    document.getElementById('provident-fund').value = ret.data.text.split("Provident Fund")[1].split("\n")[0];
-    document.getElementById('allowance').value = ret.data.text.split("Allowance")[1].split("\n")[0];
-    document.getElementById('incentive').value = ret.data.text.split("Incentive")[1].split("\n")[0];
+    (document.getElementById('basic') as HTMLInputElement).value = ret.data.text.split("Basic")[1].split("\n")[0];
+    (document.getElementById('provident-fund') as HTMLInputElement).value = ret.data.text.split("Provident Fund")[1].split("\n")[0];
+    (document.getElementById('allowance') as HTMLInputElement).value = ret.data.text.split("Allowance")[1].split("\n")[0];
+    (document.getElementById('incentive') as HTMLInputElement).value = ret.data.text.split("Incentive")[1].split("\n")[0];
     await worker.terminate();
     })();
 };
