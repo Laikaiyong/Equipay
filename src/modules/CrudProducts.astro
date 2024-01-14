@@ -5,8 +5,7 @@ import { fetchData } from '../lib/data.js';
 import NavPagination from '../components/NavPagination.astro';
 
 // const products = await fetchData('products');
-const products = new Response(
-	  JSON.stringify([
+const products = [
 		{
 			"name": "Education Dashboard",
 			"category": "Html templates",
@@ -25,8 +24,7 @@ const products = new Response(
 			"price": "$129",
 			"discount": "10%"
 		}
-	])
-	);
+	];
 ---
 
 <entities-crud type="products">
