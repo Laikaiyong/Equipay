@@ -4,8 +4,7 @@ import * as operations from '../../services/index.js';
 /* Map REST API endpoints to internal operations
   (GETs only for illustration purpose) */
 export const endpointsToOperations = {
-	products: operations.getProducts,
-	users: operations.getUsers,
+	products: operations.GET
 };
 
 function parseTypeParam(endpoint: string | undefined) {
