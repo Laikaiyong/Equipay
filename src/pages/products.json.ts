@@ -3,9 +3,9 @@ import { faker } from '@faker-js/faker';
 import { RANDOMIZE } from '../app/constants.ts';
 import type { Products } from '../types/entities.ts';
 
-// import productsStaticJSON from '../../data/products.json' assert { type: 'json' };
+import productsStaticJSON from '../../data/products.json' assert { type: 'json' };
 
-// const productsStaticData: Products = productsStaticJSON;
+const productsStaticData: Products = productsStaticJSON;
 
 export async function GET({params, request}) {
 	return new Response(
