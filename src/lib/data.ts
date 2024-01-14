@@ -5,13 +5,15 @@ import { API_URL, REMOTE_ASSETS_BASE_URL } from '../app/constants.js';
 import type { Endpoint, EndpointsToOperations } from '../types/entities.js';
 
 export async function fetchData<Selected extends Endpoint>(endpoint: Selected) {
-	const apiEndpoint = `${API_URL}${endpoint}.json`;
+	const apiEndpoint = `${API_URL}api/${endpoint}`;
+
 	console.info(`Fetching ${apiEndpoint}…`);
 	return fetch(apiEndpoint)
 		.then(
-			(r) => r.json() as unknown as Promise<
-						ReturnType<EndpointsToOperations[Selected]>
-					>
+			(r) =>
+				r.json() as unknown as Promise<
+					ReturnType<EndpointsToOperations[Selected]>
+				>,
 		)
 		.catch((e) => {
 			console.error(e);

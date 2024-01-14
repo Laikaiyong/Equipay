@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.0.4",
     "@astrojs/tailwind": "^5.1.0",
     "@aws-sdk/client-textract": "^3.489.0",
     "@faker-js/faker": "^8.3.1",

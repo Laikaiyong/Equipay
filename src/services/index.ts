@@ -1,3 +1,3 @@
 /* — Operations — */
 
-export * from '../pages/products.json.ts';
+export * from './products.ts';
