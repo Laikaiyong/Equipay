@@ -11,12 +11,6 @@ export default defineConfig({
 		? 'https://laikaiyong.github.io'
 		: `http://localhost:${DEV_PORT}`,
 	base: process.env.CI ? '/Equipay/' : undefined,
-
-	// output: 'server',
-
-	/* Like Vercel, Netlify,… Mimicking for dev. server */
-	// trailingSlash: 'always',
-
 	server: {
 		/* Dev. server only */
 		port: DEV_PORT,

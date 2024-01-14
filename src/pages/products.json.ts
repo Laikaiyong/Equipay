@@ -3,9 +3,9 @@ import { faker } from '@faker-js/faker';
 import { RANDOMIZE } from '../app/constants.ts';
 import type { Products } from '../types/entities.ts';
 
-import productsStaticJSON from '../../data/products.json' assert { type: 'json' };
+// import productsStaticJSON from '../../data/products.json' assert { type: 'json' };
 
-const productsStaticData: Products = productsStaticJSON;
+// const productsStaticData: Products = productsStaticJSON;
 
 export async function GET({params, request}) {
 	return new Response(
@@ -32,17 +32,17 @@ export async function GET({params, request}) {
 	)
   }
 
-export function getProducts(randomize = RANDOMIZE) {
-	console.log('getProducts');
+// export function getProducts(randomize = RANDOMIZE) {
+// 	console.log('getProducts');
 
-	const result = randomize
-		? productsStaticData.map((p) => {
-				p.price = faker.commerce.price();
-				p.technology = faker.commerce.productName();
-				p.description = faker.commerce.productDescription();
-				return p;
-		  })
-		: productsStaticData;
+// 	const result = randomize
+// 		? productsStaticData.map((p) => {
+// 				p.price = faker.commerce.price();
+// 				p.technology = faker.commerce.productName();
+// 				p.description = faker.commerce.productDescription();
+// 				return p;
+// 		  })
+// 		: productsStaticData;
 
-	return result;
-}
+// 	return result;
+// }
