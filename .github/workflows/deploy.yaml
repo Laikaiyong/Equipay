@@ -1,4 +1,4 @@
-name: Flowbite Admin Dashboard — Deploy to Demo to GitHub Pages
+name: Equipay - Deploy Demo
 
 on:
   push:
