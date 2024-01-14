@@ -11,7 +11,7 @@ export default defineConfig({
   site: process.env.CI
 		? 'https://laikaiyong.github.io'
 		: `http://localhost:${DEV_PORT}`,
-	base: process.env.CI ? '/Equipay' : undefined,
+	base: process.env.CI ? '/Equipay/' : undefined,
 	server: {
 		/* Dev. server only */
 		port: DEV_PORT,

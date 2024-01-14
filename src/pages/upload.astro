@@ -1,31 +1,167 @@
 ---
 import LayoutSidebar from '../app/LayoutSidebar.astro';
-import {
-    TextractClient,
-    AnalyzeExpenseCommand,
-} from '@aws-sdk/client-textract';
-
-const analyze = async (blob) => {
- try {
-    const client = new TextractClient({});
-    const input = { // AnalyzeDocumentRequest
-        Document: { // Document
-            Bytes: blob,
-            S3Object: { // S3Object
-            Bucket: "STRING_VALUE",
-            Name: "STRING_VALUE",
-            Version: "STRING_VALUE",
-            },
-        },
-    };
-    const command = new AnalyzeExpenseCommand(input);
-    const response = await client.send(command);
- } catch (error) {
-  console.error(error);
- }
-};
+const ret = "";
 ---
 
 <LayoutSidebar>
-	Upload Shit here
+    <!-- upload -->
+    <div class="bg-white p-6 shadow-md rounded-lg max-w-4xl mx-auto">
+    <div class="grid w-full max-w-sm items-center gap-1.5">
+  <label
+    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+    for="paystub"
+  >
+    Upload Your Paystub
+  </label>
+  <form>
+    <input
+    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+    id="paystub"
+    type="file"
+    accept=".jpg,.png"
+  />
+  <p class="text-sm text-gray-500 dark:text-gray-400">Please upload your paystub in JPG or PNG format.</p>
+</form>
+  <!-- <p class="text-sm text-green-500 dark:text-green-400">Your file has been successfully uploaded.</p> -->
+</div>
+  <div class="flex flex-col space-y-4">
+    <div class="flex justify-between">
+      <div>
+        <div class="font-bold">Name:</div>
+        <div class="text-sm">101 MAIN STREET ANYTOWN, USA 12345</div>
+      </div>
+      <div>
+        <div class="font-bold">Taxable Marital Status:</div>
+        <div class="text-sm">Married</div>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <div class="font-bold">Federal:</div>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="3. $25 Additional Tax"
+        />
+      </div>
+      <div>
+        <div class="font-bold">State:</div>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="2"
+        />
+      </div>
+      <div>
+        <div class="font-bold">Local:</div>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="2"
+        />
+      </div>
+      <div>
+        <div class="font-bold">total to date</div>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="27.00"
+        />
+      </div>
+      <div>
+        <div class="font-bold">Loan Amt Paid</div>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="840.00"
+        />
+      </div>
+      <div>
+        <div class="font-bold">Gross Pay</div>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="$ 452.43"
+        />
+      </div>
+      <div>
+        <div class="font-bold">Vac Hrs</div>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="40.00"
+        />
+      </div>
+      <div>
+        <div class="font-bold">Sick Hrs</div>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="16.00"
+        />
+      </div>
+      <div>
+        <div class="font-bold">Title</div>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="Operator"
+        />
+      </div>
+      <div>
+        <div class="font-bold">HOURLY RATE HAS BEEN CHANGED</div>
+        <div class="text-sm">FROM</div>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="$8.00"
+        />
+      </div>
+      <div>
+        <div class="font-bold">PER HOUR</div>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="TO $10.00"
+        />
+      </div>
+      <div>
+        <div class="font-bold">Life Insurance</div>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="+ 13.50"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+import { createWorker } from 'tesseract.js';
+
+
+function analyze(blob) {
+    (async () => {
+    const worker = await createWorker('eng');
+    const ret = await worker.recognize(blob);
+    console.log(ret.data.text);
+    await worker.terminate();
+    })();
+};
+
+function handleFileUpload() {
+    const fileInput = document.getElementById('paystub') as HTMLInputElement;
+    if (fileInput && fileInput.files) {
+        const file = fileInput.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+            reader.readAsArrayBuffer(file);
+            reader.onload = function() {
+                const arrayBuffer = reader.result as ArrayBuffer;
+                const blob = new Blob([arrayBuffer]);
+                const results = analyze(blob);  // Call the analyze function with the blob
+                return results;
+            };
+            reader.onerror = function(error) {
+                console.error('Error reading file:', error);
+            };
+        }
+    }
+}
+
+document.getElementById('paystub').addEventListener('change', handleFileUpload);
+</script>
+
 </LayoutSidebar>

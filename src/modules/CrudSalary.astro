@@ -7,22 +7,22 @@ import NavPagination from '../components/NavPagination.astro';
 // const products = await fetchData('products');
 const products = [
 		{
-			"name": "Education Dashboard",
-			"category": "Html templates",
-			"technology": "Angular",
+			"name": "Software Engineer",
+			"category": "Entry-Level",
+			"technology": "Information Technology",
 			"id": 194556,
-			"description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-			"price": "$149",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et dolor eu lectus viverra dictum in sed dolor. Donec dapibus.",
+			"price": "$1500",
 			"discount": "No"
 		},
 		{
-			"name": "React UI Kit",
-			"category": "Html templates",
-			"technology": "React JS",
+			"name": "Flight Student",
+			"category": "Entry-Level",
+			"technology": "Transportation",
 			"id": 623232,
-			"description": "Start developing with an open-source library of over 450+ UI components, sections, and pages built with the utility classes from Tailwind CSS and designed in Figma.",
-			"price": "$129",
-			"discount": "10%"
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et dolor eu lectus viverra dictum in sed dolor. Donec dapibus.",
+			"price": "$800",
+			"discount": "Yes"
 		}
 	];
 ---
@@ -42,36 +42,21 @@ const products = [
 								href="#"
 								class="inline-flex items-center text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-white"
 							>
-								<svg
-									class="w-5 h-5 mr-2.5"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-									xmlns="http://www.w3.org/2000/svg"
-									><path
-										d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
-									></path></svg
-								>
-								Home
+							<svg
+							class="flex-shrink-0 w-6 h-6 pr-2 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+							fill="currentColor"
+							viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg"
+							aria-hidden="true"
+						>
+							<path
+								clip-rule="evenodd"
+								fill-rule="evenodd"
+								d="M.99 5.24A2.25 2.25 0 013.25 3h13.5A2.25 2.25 0 0119 5.25l.01 9.5A2.25 2.25 0 0116.76 17H3.26A2.267 2.267 0 011 14.74l-.01-9.5zm8.26 9.52v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 00.627-.74zm1.5 0a.75.75 0 00.627.74h5.373a.75.75 0 00.75-.75v-.615a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75v.625zm6.75-3.63v-.625a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 00.75-.75zm-8.25 0v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 00.75-.75zM17.5 7.5v-.625a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75V7.5c0 .414.336.75.75.75h5.25a.75.75 0 00.75-.75zm-8.25 0v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75V7.5c0 .414.336.75.75.75H8.5a.75.75 0 00.75-.75z"
+							></path>
+						</svg>
+								Data
 							</a>
-						</li>
-						<li>
-							<div class="flex items-center">
-								<svg
-									class="w-6 h-6 text-gray-400"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-									xmlns="http://www.w3.org/2000/svg"
-									><path
-										fill-rule="evenodd"
-										d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-										clip-rule="evenodd"></path></svg
-								>
-								<a
-									href="#"
-									class="ml-1 text-gray-700 hover:text-primary-600 md:ml-2 dark:text-gray-300 dark:hover:text-white"
-									>E-commerce</a
-								>
-							</div>
 						</li>
 						<li>
 							<div class="flex items-center">
@@ -87,7 +72,7 @@ const products = [
 								>
 								<span
 									class="ml-1 text-gray-400 md:ml-2 dark:text-gray-500"
-									aria-current="page">Products</span
+									aria-current="page">Salary</span
 								>
 							</div>
 						</li>
@@ -96,7 +81,7 @@ const products = [
 				<h1
 					class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white"
 				>
-					All products
+					All Salary
 				</h1>
 			</div>
 			<div class="items-center justify-between block sm:flex">
@@ -109,7 +94,7 @@ const products = [
 								name="email"
 								id="products-search"
 								class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-								placeholder="Search for products"
+								placeholder="Search for salary"
 							/>
 						</div>
 					</form>
@@ -250,12 +235,12 @@ const products = [
 
 								{
 									[
-										'Product Name',
-										'Technology',
+										'Job Title',
+										'Industry',
 										'Description',
 										'ID',
-										'Price',
-										'Discount',
+										'Wages',
+										'Benefits',
 										'Actions',
 									].map((th) => (
 										<th
@@ -273,7 +258,6 @@ const products = [
 							class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700"
 						>
 							{
-								(products.ok) ??
 								products.map((product) => (
 									<tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
 										<td class="w-4 p-4">
@@ -321,7 +305,8 @@ const products = [
 												data-drawer-show="drawer-update-product-default"
 												aria-controls="drawer-update-product-default"
 												data-drawer-placement="right"
-												class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+												class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-gray-400
+												 dark:text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
 											>
 												<svg
 													class="w-4 h-4 mr-2"
@@ -386,7 +371,7 @@ const products = [
 			id="drawer-label"
 			class="inline-flex items-center mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400"
 		>
-			Update Product
+			Update Info
 		</h5>
 		<button
 			type="button"
@@ -421,7 +406,7 @@ const products = [
 						name="title"
 						id="name"
 						class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-						value="Education Dashboard"
+						value="Sofware Engineer"
 						placeholder="Type product name"
 						required=""
 					/>
@@ -436,10 +421,10 @@ const products = [
 						id="category"
 						class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
 					>
-						<option selected="">Flowbite</option>
-						<option value="RE">React</option>
-						<option value="AN">Angular</option>
-						<option value="VU">Vue JS</option>
+						<option selected="">Information Technology</option>
+						<option value="RE">Marketing and Sales</option>
+						<option value="AN">Transportation</option>
+						<option value="VU">Human Resources and Management</option>
 					</select>
 				</div>
 				<div>
@@ -453,7 +438,7 @@ const products = [
 						name="price"
 						id="price"
 						class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-						value="2999"
+						value="1800"
 						placeholder="$149"
 						required=""
 					/>
@@ -469,29 +454,22 @@ const products = [
 						rows="4"
 						class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
 						placeholder="Enter event description here"
-						>Start developing with an open-source library of over 450+ UI
-						components, sections, and pages built with the utility classes from
-						Tailwind CSS and designed in Figma.</textarea
+						>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat odio non semper faucibus. Duis nec purus dignissim, vestibulum magna quis, molestie lacus. Praesent vitae maximus tellus, ut viverra arcu.
+						</textarea
 					>
 				</div>
 				<div>
 					<label
 						for="discount"
 						class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-						>Discount</label
+						>Benefits</label
 					>
 					<select
 						id="discount"
 						class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
 					>
 						<option selected="">No</option>
-						<option value="5">5%</option>
-						<option value="10">10%</option>
-						<option value="20">20%</option>
-						<option value="30">30%</option>
-						<option value="40">40%</option>
-						<option value="50">50%</option>
-					</select>
+						<option value="5">Yes</option>
 				</div>
 			</div>
 			<div
