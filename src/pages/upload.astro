@@ -47,7 +47,6 @@ const ret = "";
         <div class="font-bold">Designation:</div>
         <input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="2"
           id="designation"
         />
       </div>
@@ -55,7 +54,6 @@ const ret = "";
         <div class="font-bold">Department</div>
         <input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="2"
           id="department"
         />
       </div>
@@ -63,7 +61,6 @@ const ret = "";
         <div class="font-bold">Basic</div>
         <input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="27.00"
           id="basic"
         />
       </div>
@@ -71,7 +68,6 @@ const ret = "";
         <div class="font-bold">Incentive</div>
         <input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="840.00"
           id="incentive"
         />
       </div>
@@ -79,7 +75,6 @@ const ret = "";
         <div class="font-bold">Allowance</div>
         <input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="$ 452.43"
           id="allowance"
         />
       </div>
@@ -87,7 +82,6 @@ const ret = "";
         <div class="font-bold">Provident Fund</div>
         <input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="40.00"
           id="provident-fund"
         />
       </div>
@@ -95,7 +89,6 @@ const ret = "";
         <div class="font-bold">Loan</div>
         <input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="16.00"
           id="loan"
         />
       </div>
@@ -123,10 +116,10 @@ function analyze(blob) {
     (document.getElementById('loan') as HTMLInputElement).value = ret.data.text.split("Loan")[1].split("\n")[0];
 
 
-    (document.getElementById('basic') as HTMLInputElement).value = ret.data.text.split("Basic : ")[1].split("\n")[0];
-    (document.getElementById('provident-fund') as HTMLInputElement).value = ret.data.text.split("Provident Fund : ")[1].split("\n")[0];
-    (document.getElementById('allowance') as HTMLInputElement).value = ret.data.text.split("Allowance : ")[1].split("\n")[0];
-    (document.getElementById('incentive') as HTMLInputElement).value = ret.data.text.split("Incentive : ")[1].split("\n")[0];
+    (document.getElementById('basic') as HTMLInputElement).value = ret.data.text.split("Basic")[1].split("\n")[0];
+    (document.getElementById('provident-fund') as HTMLInputElement).value = ret.data.text.split("Provident Fund")[1].split("\n")[0];
+    (document.getElementById('allowance') as HTMLInputElement).value = ret.data.text.split("Allowance")[1].split("\n")[0];
+    (document.getElementById('incentive') as HTMLInputElement).value = ret.data.text.split("Incentive Pay")[1].split("\n")[0];
     await worker.terminate();
     })();
 };
