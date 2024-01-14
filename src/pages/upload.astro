@@ -25,100 +25,78 @@ const ret = "";
   <!-- <p class="text-sm text-green-500 dark:text-green-400">Your file has been successfully uploaded.</p> -->
 </div>
   <div class="flex flex-col space-y-4">
-    <div class="flex justify-between">
+    <div  class="grid grid-cols-2 gap-4">
       <div>
-        <div class="font-bold">Name:</div>
-        <div class="text-sm">101 MAIN STREET ANYTOWN, USA 12345</div>
+        <div class="font-bold">Employee Name:</div>
+        <div id="name" class="text-sm">-</div>
       </div>
       <div>
-        <div class="font-bold">Taxable Marital Status:</div>
-        <div class="text-sm">Married</div>
+        <div class="font-bold">Company Name:</div>
+        <div id="company-name" class="text-sm">-</div>
       </div>
     </div>
     <div class="grid grid-cols-2 gap-4">
       <div>
-        <div class="font-bold">Federal:</div>
+        <div class="font-bold">Pay period:</div>
         <input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="3. $25 Additional Tax"
+          id="pay-period"
         />
       </div>
       <div>
-        <div class="font-bold">State:</div>
-        <input
-          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="2"
-        />
-      </div>
-      <div>
-        <div class="font-bold">Local:</div>
+        <div class="font-bold">Designation:</div>
         <input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
           placeholder="2"
+          id="designation"
         />
       </div>
       <div>
-        <div class="font-bold">total to date</div>
+        <div class="font-bold">Department</div>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="2"
+          id="department"
+        />
+      </div>
+      <div>
+        <div class="font-bold">Basic</div>
         <input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
           placeholder="27.00"
+          id="basic"
         />
       </div>
       <div>
-        <div class="font-bold">Loan Amt Paid</div>
+        <div class="font-bold">Incentive</div>
         <input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
           placeholder="840.00"
+          id="incentive"
         />
       </div>
       <div>
-        <div class="font-bold">Gross Pay</div>
+        <div class="font-bold">Allowance</div>
         <input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
           placeholder="$ 452.43"
+          id="allowance"
         />
       </div>
       <div>
-        <div class="font-bold">Vac Hrs</div>
+        <div class="font-bold">Provident Fund</div>
         <input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
           placeholder="40.00"
+          id="provident-fund"
         />
       </div>
       <div>
-        <div class="font-bold">Sick Hrs</div>
+        <div class="font-bold">Loan</div>
         <input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
           placeholder="16.00"
-        />
-      </div>
-      <div>
-        <div class="font-bold">Title</div>
-        <input
-          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="Operator"
-        />
-      </div>
-      <div>
-        <div class="font-bold">HOURLY RATE HAS BEEN CHANGED</div>
-        <div class="text-sm">FROM</div>
-        <input
-          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="$8.00"
-        />
-      </div>
-      <div>
-        <div class="font-bold">PER HOUR</div>
-        <input
-          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="TO $10.00"
-        />
-      </div>
-      <div>
-        <div class="font-bold">Life Insurance</div>
-        <input
-          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="+ 13.50"
+          id="loan"
         />
       </div>
     </div>
@@ -136,6 +114,19 @@ function analyze(blob) {
     const worker = await createWorker('eng');
     const ret = await worker.recognize(blob);
     console.log(ret.data.text);
+
+    document.getElementById('company-name').innerText = ret.data.text.split("\n")[1];
+    document.getElementById('name').innerText = ret.data.text.split("name : ")[1].split("\n")[0];
+    (document.getElementById('pay-period') as HTMLInputElement).value = ret.data.text.split("Pay Period : ")[1].split("D")[0];
+    (document.getElementById('designation') as HTMLInputElement).value = ret.data.text.split("Designation : ")[1].split("\n")[0];
+    (document.getElementById('department') as HTMLInputElement).value = ret.data.text.split("Department : ")[1].split("\n")[0];
+    document.getElementById('loan').value = ret.data.text.split("Loan")[1].split("\n")[0];
+
+
+    document.getElementById('basic').value = ret.data.text.split("Basic")[1].split("\n")[0];
+    document.getElementById('provident-fund').value = ret.data.text.split("Provident Fund")[1].split("\n")[0];
+    document.getElementById('allowance').value = ret.data.text.split("Allowance")[1].split("\n")[0];
+    document.getElementById('incentive').value = ret.data.text.split("Incentive")[1].split("\n")[0];
     await worker.terminate();
     })();
 };
