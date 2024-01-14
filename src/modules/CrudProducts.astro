@@ -253,6 +253,7 @@ const products = await fetchData('products');
 							class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700"
 						>
 							{
+								(products.ok) ??
 								products.map((product) => (
 									<tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
 										<td class="w-4 p-4">
