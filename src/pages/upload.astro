@@ -123,10 +123,10 @@ function analyze(blob) {
     (document.getElementById('loan') as HTMLInputElement).value = ret.data.text.split("Loan")[1].split("\n")[0];
 
 
-    (document.getElementById('basic') as HTMLInputElement).value = ret.data.text.split("Basic")[1].split("\n")[0];
-    (document.getElementById('provident-fund') as HTMLInputElement).value = ret.data.text.split("Provident Fund")[1].split("\n")[0];
-    (document.getElementById('allowance') as HTMLInputElement).value = ret.data.text.split("Allowance")[1].split("\n")[0];
-    (document.getElementById('incentive') as HTMLInputElement).value = ret.data.text.split("Incentive")[1].split("\n")[0];
+    (document.getElementById('basic') as HTMLInputElement).value = ret.data.text.split("Basic : ")[1].split("\n")[0];
+    (document.getElementById('provident-fund') as HTMLInputElement).value = ret.data.text.split("Provident Fund : ")[1].split("\n")[0];
+    (document.getElementById('allowance') as HTMLInputElement).value = ret.data.text.split("Allowance : ")[1].split("\n")[0];
+    (document.getElementById('incentive') as HTMLInputElement).value = ret.data.text.split("Incentive : ")[1].split("\n")[0];
     await worker.terminate();
     })();
 };
